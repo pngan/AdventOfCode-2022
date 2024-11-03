@@ -9,7 +9,7 @@ public class DayTests
     public void Tests()
     {
         ConfirmResult1<Day01>("74711");
-        ConfirmResult2<Day01>("209481");
+        ConfirmResult2<Day01>("209481888");
     }
 
     private static void ConfirmResult1<T>(string expected) where T : BaseDay, new()
