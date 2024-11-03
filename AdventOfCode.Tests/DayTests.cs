@@ -8,7 +8,7 @@ public class DayTests
     [Test]
     public void Tests()
     {
-        ConfirmResult<Day01>("45000", "209481");
+        ConfirmResult<Day01>(expectedPart1: "45000", expectedPart2: "209481");
     }
 
     private static void ConfirmResult<T>(string? expectedPart1, string? expectedPart2) where T : BaseDay, new()
