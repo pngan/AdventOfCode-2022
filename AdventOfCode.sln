@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Console", "AdventOfCode.Console\AdventOfCode.Console.csproj", "{CE4D4C90-C7EE-4BFA-8F95-822752D3DA78}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdventOfCode2022", "AdventOfCode2022", "{10B45DF9-D8B8-4B39-BF83-1CB47E1A33D3}"
+	ProjectSection(SolutionItems) = preProject
+		Get-AdventOfCodeInput.ps1 = Get-AdventOfCodeInput.ps1
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Solutions", "AdventOfCode.Solutions\AdventOfCode.Solutions.csproj", "{6977E60A-355D-433C-B5A0-FACE5DDEC57F}"
 EndProject

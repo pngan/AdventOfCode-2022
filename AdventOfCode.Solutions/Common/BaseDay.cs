@@ -7,6 +7,7 @@ public abstract class BaseDay
 }
 public abstract class BaseDay<TInput> : BaseDay
 {
+    const int Year = 2022;
     protected BaseDay()
     {
         _day = GetType().Name[^2..];
@@ -18,7 +19,7 @@ public abstract class BaseDay<TInput> : BaseDay
     
     public override string? Solve1()
     {
-        var input = File.ReadAllLines($@"Days\Day{_day}\day{_day}-1.txt");
+        var input = File.ReadAllLines($@"Inputs\{Year}_{_day}_input.txt");
         return Solve1(Parse(input)).ToString();
     }
     
@@ -26,7 +27,7 @@ public abstract class BaseDay<TInput> : BaseDay
     
     public override string? Solve2()
     {
-        var input = File.ReadAllLines($@"Days\Day{_day}\day{_day}-2.txt");
+        var input = File.ReadAllLines($@"Inputs\{Year}_{_day}_input.txt");
         return Solve2(Parse(input)).ToString();
     }
     
