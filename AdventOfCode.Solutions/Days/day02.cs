@@ -1,22 +1,14 @@
 ﻿using AdventOfCode.Solutions.Common;
-using AdventOfCode.Solutions.Extensions;
 
 namespace AdventOfCode.Solutions.Days;
 
 public class Day02 : BaseDay<string[]>
 {
-    protected override string[] Parse(IEnumerable<string> input) =>
-        input.ToArray();
+    protected override string[] Parse(string[] input) => input;
 
-    protected override object Solve1(string[] input)
-    {
-        return input.Sum(inputLine => Score(inputLine));
-    }
+    protected override object Solve1(string[] input) => input.Sum(Score);
 
-    protected override object Solve2(string[] input)
-    {
-        return input.Sum(inputLine => Score(Transform(inputLine)));
-    }
+    protected override object Solve2(string[] input) => input.Sum(inputLine => Score(Transform(inputLine)));
 
 
     static int Score(string input) => input switch
