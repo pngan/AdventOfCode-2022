@@ -4,7 +4,7 @@ public static class EnumerableExtensions
 {
     public static List<List<T>> Split<T>(this IEnumerable<T> input, Func<T, bool> splitOn)
     {
-        var result = new List<List<T>>{ new() };
+        var result = new List<List<T>> { new() };
 
         input.ToList().ForEach(x =>
         {

@@ -16,20 +16,20 @@ public abstract class BaseDay<TInput> : BaseDay
     private static string? _day;
 
     protected abstract TInput Parse(IEnumerable<string> input);
-    
+
     public override string? Solve1()
     {
         var input = File.ReadAllLines($@"Inputs\{Year}_{_day}_input.txt");
         return Solve1(Parse(input)).ToString();
     }
-    
+
     protected abstract object Solve1(TInput input);
-    
+
     public override string? Solve2()
     {
         var input = File.ReadAllLines($@"Inputs\{Year}_{_day}_input.txt");
         return Solve2(Parse(input)).ToString();
     }
-    
+
     protected abstract object Solve2(TInput input);
 }
