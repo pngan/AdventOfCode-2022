@@ -8,3 +8,6 @@ C# solutions to the [Advent Of Code 2022](https://adventofcode.com/) Puzzles.
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
+
+----
+The structure of this solution was based on [this example](https://github.com/nick-wilson95/AdventOfCode2022)

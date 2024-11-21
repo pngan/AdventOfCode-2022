@@ -8,6 +8,8 @@ public class DayTests
     [Test]
     public void Tests()
     {
+        ConfirmResult1<Day02>("12855");
+        ConfirmResult2<Day02>("13726");
         ConfirmResult1<Day01>("74711");
         ConfirmResult2<Day01>("209481");
     }
