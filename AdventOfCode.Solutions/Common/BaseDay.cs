@@ -20,7 +20,8 @@ public abstract class BaseDay<TInput> : BaseDay
 
     protected BaseDay()
     {
-        _input = File.ReadAllLines($@"Inputs\{Year}_{DayNumber:00}_input.txt");
+        _input = File.ReadAllLines($@"Inputs\{Year}_{DayNumber:00}_input.txt")
+            .ToArray();
     }
 
     [Benchmark]

@@ -20,4 +20,22 @@ public static class EnumerableExtensions
 
         return result;
     }
+
+    public static IEnumerable<T> Dump<T>(this IEnumerable<T> input)
+    {
+        foreach (var element in input)
+        {
+            Console.WriteLine(element);
+            yield return element;
+        }
+    }
+
+    public static IEnumerable<string> SkipEmptyLines(this IEnumerable<string> input) 
+    {
+        foreach (var element in input)
+        {
+            if (!string.IsNullOrWhiteSpace(element))
+            yield return element;
+        }
+    }
 }
