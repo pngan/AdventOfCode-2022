@@ -1,3 +1,5 @@
+using BenchmarkDotNet.Attributes;
+
 namespace AdventOfCode.Solutions.Common;
 
 public abstract class BaseDay
@@ -5,6 +7,7 @@ public abstract class BaseDay
     public abstract string? Solve1();
     public abstract string? Solve2();
 }
+
 public abstract class BaseDay<TInput> : BaseDay
 {
     const int Year = 2022;
@@ -13,19 +16,20 @@ public abstract class BaseDay<TInput> : BaseDay
 
     protected abstract TInput Parse(string[] input);
 
-    public override string? Solve1()
+    private string[] _input;
+
+    protected BaseDay()
     {
-        var input = File.ReadAllLines($@"Inputs\{Year}_{DayNumber:00}_input.txt");
-        return Solve1(Parse(input)).ToString();
+        _input = File.ReadAllLines($@"Inputs\{Year}_{DayNumber:00}_input.txt");
     }
+
+    [Benchmark]
+    public override string? Solve1() => Solve1(Parse(_input)).ToString();
 
     protected abstract object Solve1(TInput input);
 
-    public override string? Solve2()
-    {
-        var input = File.ReadAllLines($@"Inputs\{Year}_{DayNumber:00}_input.txt");
-        return Solve2(Parse(input)).ToString();
-    }
+    [Benchmark]
+    public override string? Solve2() => Solve2(Parse(_input)).ToString();
 
     protected abstract object Solve2(TInput input);
 }

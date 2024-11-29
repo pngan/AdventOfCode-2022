@@ -10,5 +10,9 @@ C# solutions to the [Advent Of Code 2022](https://adventofcode.com/) Puzzles.
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
+## Performance and Memory Benchmarking
+
+To measure the run duration and memory usage, set the Start up project to be `AdventOfCode.Benchmark`, rebuild the projects in `Release` mode, and run the Benchmark project. This will output timing and memory usage using BenchamrkDotnet.
+
 ----
 The structure of this solution was based on [this example](https://github.com/nick-wilson95/AdventOfCode2022)
