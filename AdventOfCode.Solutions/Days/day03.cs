@@ -7,6 +7,8 @@ namespace AdventOfCode.Solutions.Days;
 
 public class Day03 : BaseDay<string[]>
 {
+    protected override int DayNumber { get; } = 3;
+
     protected override string[] Parse(string[] input) => input;
 
     protected override object Solve1(string[] input)

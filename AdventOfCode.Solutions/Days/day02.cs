@@ -4,6 +4,7 @@ namespace AdventOfCode.Solutions.Days;
 
 public class Day02 : BaseDay<string[]>
 {
+    protected override int DayNumber { get; } = 2;
     protected override string[] Parse(string[] input) => input;
 
     protected override object Solve1(string[] input) => input.Sum(Score);

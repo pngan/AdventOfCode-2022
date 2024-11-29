@@ -5,6 +5,8 @@ namespace AdventOfCode.Solutions.Days;
 
 public class Day01 : BaseDay<IEnumerable<int>[]>
 {
+    protected override int DayNumber { get; } = 1;
+
     protected override IEnumerable<int>[] Parse(string[] input) =>
         input.Split(x => x == string.Empty)
             .Select(x => x.Select(int.Parse)).ToArray();
