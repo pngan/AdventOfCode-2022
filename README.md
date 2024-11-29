@@ -12,7 +12,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ## Performance and Memory Benchmarking
 
-To measure the run duration and memory usage, set the Start up project to be `AdventOfCode.Benchmark`, rebuild the projects in `Release` mode, and run the Benchmark project. This will output timing and memory usage using BenchamrkDotnet.
+To measure the run duration and memory usage, set the Start up project to be `AdventOfCode.Benchmark`, rebuild the projects in `Release` mode, and run the Benchmark project. This will output timing and memory usage using BenchmarkDotnet.
 
 ----
 The structure of this solution was based on [this example](https://github.com/nick-wilson95/AdventOfCode2022)
