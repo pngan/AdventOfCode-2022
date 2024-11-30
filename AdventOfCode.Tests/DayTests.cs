@@ -5,7 +5,7 @@ namespace AdventOfCode.Tests;
 
 public class DayTests
 {
-    [TestCase(typeof(Day12), "449", "")]
+    [TestCase(typeof(Day12), "449", "443")]
     [TestCase(typeof(Day04), "526", "886")]
     [TestCase(typeof(Day03), "", "2881")]
     [TestCase(typeof(Day02), "12855", "13726")]

@@ -1,7 +1,4 @@
-﻿using System.Collections.Immutable;
-
-using AdventOfCode.Solutions.Common;
-using AdventOfCode.Solutions.Extensions;
+﻿using AdventOfCode.Solutions.Common;
 
 using Point = (int r, int c);
 
@@ -53,7 +50,6 @@ public class Day12 : BaseDay<Data12>
             .Where(x => map.ContainsKey(x));
     }
 
-
     protected override object Solve1(Data12 input)
     {
         long steps = 0;
@@ -61,7 +57,7 @@ public class Day12 : BaseDay<Data12>
         pq.Enqueue((input.start, input.start), 0); // Initialize for looping
 
         Dictionary<Point, (Point prev, long cost, bool visited)> tracking = new();
-        foreach(var entry in input.map)
+        foreach (var entry in input.map)
         {
             tracking[entry.Key] = (entry.Key, 0, false);
         }
@@ -73,7 +69,7 @@ public class Day12 : BaseDay<Data12>
                 throw new InvalidDataException("Did not find target");
 
             // Stop if priority queue is empty
-            if (!pq.TryDequeue(out (Point from, Point to) path, out long cost) || tracking.Values.All(t => t.visited) || path.to == input.end)
+            if (!pq.TryDequeue(out (Point from, Point to) path, out long cost) || path.to == input.end)
                 break;
 
             // Ignore if the inspected node has its distance already determined
@@ -101,8 +97,55 @@ public class Day12 : BaseDay<Data12>
         return steps;
     }
 
+    // Difference from part 1:
+    // Start at end
+    // Termination condition is when encounter a 'a'
+    // The admissible step condition is now, cannot step down more than 1 unit
     protected override object Solve2(Data12 input)
     {
-        throw new NotImplementedException();
+        long steps = 0;
+        var pq = new PriorityQueue<(Point from, Point to), long>();
+        pq.Enqueue((input.end, input.end), 0); // Initialize for looping
+
+        Dictionary<Point, (Point prev, long cost, bool visited)> tracking = new();
+        foreach (var entry in input.map)
+        {
+            tracking[entry.Key] = (entry.Key, 0, false);
+        }
+
+        while (true)
+        {
+            // Catch bad case
+            if (tracking.Values.All(t => t.visited))
+                throw new InvalidDataException("Did not find target");
+
+            // Stop if priority queue is empty
+            if (!pq.TryDequeue(out (Point from, Point to) path, out long cost) || 'a' == input.map[path.to])
+                break;
+
+            // Ignore if the inspected node has its distance already determined
+            if (tracking[path.to].visited)
+                continue;
+
+            // Handle minimum item from priority queue
+            tracking[path.to] = (path.from, cost, true);
+            steps = cost;
+
+            // Process edges from path.to
+            var neighbours = GetNeighbours(input.map, path.to);
+
+            foreach (var neighbor in neighbours)
+            {
+                // Optimisation: Edge is already part of a shortest path, so no need to reprocess it
+                if (tracking[neighbor].visited || path.to == tracking[neighbor].prev)
+                    continue;
+
+                // Only enqueue if neighbour is at most one height more than current
+                if (input.map[neighbor] >= input.map[path.to] - 1)
+                    pq.Enqueue((path.to, neighbor), cost + 1);
+            }
+        }
+        return steps;
     }
+
 }
