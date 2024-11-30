@@ -86,7 +86,7 @@ public class Day12 : BaseDay<Data12>
             foreach (var neighbor in neighbours)
             {
                 // Optimisation: Edge is already part of a shortest path, so no need to reprocess it
-                if (tracking[neighbor].visited || path.to == tracking[neighbor].prev)
+                if (tracking[neighbor].visited)
                     continue;
 
                 // Only enqueue if neighbour is at most one height more than current
@@ -137,7 +137,7 @@ public class Day12 : BaseDay<Data12>
             foreach (var neighbor in neighbours)
             {
                 // Optimisation: Edge is already part of a shortest path, so no need to reprocess it
-                if (tracking[neighbor].visited || path.to == tracking[neighbor].prev)
+                if (tracking[neighbor].visited)
                     continue;
 
                 // Only enqueue if neighbour is at most one height more than current
