@@ -23,4 +23,12 @@
     <PackageReference Include="MoreLinq" Version="4.3.0" />
     <PackageReference Include="Microsoft.Z3" Version="4.12.2" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="input\2025_01_input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="input\2025_02_input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

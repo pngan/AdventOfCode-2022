@@ -20,5 +20,8 @@ An example to get the input files for Year 2022 and Day 1 is:
 
 | Day | Name | Type | Part 1 (ms) | Part 2 (ms) |
 |---:|---|---|---:|---:|
+| [01](code/day01.cs) | [Calorie Counting](https://adventofcode.com/2022/day/1) | Sorting/Search | 9 | 5 |
+| [02](code/day02.cs) | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Unknown | 1 | 0 |
 
 <!-- TIMINGS END -->
+

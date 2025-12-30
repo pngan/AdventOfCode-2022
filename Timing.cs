@@ -16,15 +16,13 @@ namespace AdventOfCode_2022
     {
         input.DynamicInvoke();
         var sw = Stopwatch.StartNew();
-        var res1 = solve1();
+        solve1();
         sw.Stop();
-        Console.WriteLine($"Day {day} - Part 1 Result: {res1}");
         Console.WriteLine($"Day {day} - Part 1: {sw.ElapsedMilliseconds,6} ms");
         var p1 = sw.ElapsedMilliseconds;
         sw.Restart();
-        var res2 = solve2();
+        solve2();
         sw.Stop();
-        Console.WriteLine($"Day {day} - Part 2 Result: {res2}");
         Console.WriteLine($"Day {day} - Part 2: {sw.ElapsedMilliseconds,6} ms");
         var p2 = sw.ElapsedMilliseconds;
         _entries.Add(new Entry(day, p1, p2));
