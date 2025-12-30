@@ -2,23 +2,10 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <RootNamespace>AdventOfCode_2022</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Timing.cs" />
-    <Compile Include="code/day01.cs" />
-    <Compile Include="code/day02.cs" />
-    <Compile Include="code/day03.cs" />
-    <Compile Include="code/day04.cs" />
-    <Compile Include="code/day12.cs" />
-    <Compile Include="code/template.cs" />
-    <Compile Include="utilities/Extensions.cs" />
-    <Compile Include="utilities/image/Image2.cs" />
-    <Compile Include="utilities/image/PointExtensions.cs" />
-    <Compile Include="utilities/numeric/Point3Extensions.cs" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MoreLinq" Version="4.3.0" />
   </ItemGroup>

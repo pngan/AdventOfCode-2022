@@ -67,7 +67,7 @@ namespace AdventOfCode_2022
                         if (m.Success)
                         {
                             var title = System.Net.WebUtility.HtmlDecode(m.Groups[1].Value).Trim();
-                            string extracted = null;
+                            string extracted = String.Empty;
                             // Title often contains the year and day, e.g. "Advent of Code 2022 - Day 1: Report Repair"
                             var idx = title.IndexOf(':');
                             if (idx >= 0 && idx + 1 < title.Length)

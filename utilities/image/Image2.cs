@@ -5,11 +5,11 @@ using System.Numerics;
 
 namespace AdventOfCode_2022.utilities.image
 {
-    public class Image2<T> where T : IParsable<T>
+    public class Image2<T> where T : notnull, IParsable<T>
 {
     public readonly int ROWS;
     public readonly int COLS;
-    private T[][] _image;
+    private readonly T[][] _image;
 
     public Image2(int rows, int cols)
     {
@@ -21,8 +21,10 @@ namespace AdventOfCode_2022.utilities.image
             _image[r] = new T[cols];
             for (int c = 0; c < COLS; c++)
             {
-                this[(r, c)] = default(T);
-            }
+#pragma warning disable CS8601 // Possible null reference assignment.
+                    this[(r, c)] = default(T);
+#pragma warning restore CS8601 // Possible null reference assignment.
+                }
         }
     }
 
@@ -36,8 +38,10 @@ namespace AdventOfCode_2022.utilities.image
 
     public bool TryGetValue((int r, int c) p, out T value)
     {
-        value = default;
-        if (!Exists(p)) return false;
+#pragma warning disable CS8601 // Possible null reference assignment.
+            value = default;
+#pragma warning restore CS8601 // Possible null reference assignment.
+            if (!Exists(p)) return false;
         value = _image[p.r][p.c];
         return true;
     }

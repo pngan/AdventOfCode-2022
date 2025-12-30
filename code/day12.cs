@@ -38,7 +38,7 @@ namespace AdventOfCode_2022.code
         if (start is null)
             throw new InvalidDataException("Did not find start point on map.");
 
-        return new Data12(map, start.Value, end.Value);
+        return new Data12(map, start.Value, end!.Value);
     }
 
     private static IEnumerable<Point> GetNeighbours(Dictionary<Point, char> map, Point point)
