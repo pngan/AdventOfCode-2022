@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using MoreLinq;
 
-namespace AdventOfCode_2025.code
+namespace AdventOfCode_2022.code
 {
     public class Day0
 {
