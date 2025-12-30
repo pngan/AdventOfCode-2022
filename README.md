@@ -20,15 +20,16 @@ An example to get the input files for Year 2022 and Day 1 is:
 
 | Day | Name | Type | Part 1 (ms) | Part 2 (ms) |
 |---:|---|---|---:|---:|
-| [01](code/day01.cs) | [Calorie Counting](https://adventofcode.com/2022/day/1) | Sorting/Search | 9 | 13 |
+| [01](code/day01.cs) | [Calorie Counting](https://adventofcode.com/2022/day/1) | Sorting/Search | 19 | 5 |
 | [02](code/day02.cs) | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Unknown | 1 | 0 |
 | [03](code/day03.cs) | [Rucksack Reorganization](https://adventofcode.com/2022/day/3) | Unknown | 0 | 2 |
-| [04](code/day04.cs) | [Camp Cleanup](https://adventofcode.com/2022/day/4) | Parsing | 2 | 1 |
+| [04](code/day04.cs) | [Camp Cleanup](https://adventofcode.com/2022/day/4) | Parsing | 1 | 1 |
 | [05](code/day05.cs) | [Supply Stacks](https://adventofcode.com/2022/day/5) | Stack | 3 | 0 |
-| [06](code/day06.cs) | [Tuning Trouble](https://adventofcode.com/2022/day/6) | Unknown | 1 | 3 |
-| [12](code/day12.cs) | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) | Graph | 75 | 21 |
+| [06](code/day06.cs) | [Tuning Trouble](https://adventofcode.com/2022/day/6) | Unknown | 0 | 2 |
+| [12](code/day12.cs) | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) | Graph | 50 | 22 |
 
 <!-- TIMINGS END -->
+
 
 
 
