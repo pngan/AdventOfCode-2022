@@ -12,6 +12,7 @@ namespace AdventOfCode_2022
             Timing.Run(Day03.Day, Day03.Input, Day03.Solve1, Day03.Solve2);
             Timing.Run(Day04.Day, Day04.Input, Day04.Solve1, Day04.Solve2);
             Timing.Run(Day05.Day, Day05.Input, Day05.Solve1, Day05.Solve2);
+            Timing.Run(Day06.Day, Day06.Input, Day06.Solve1, Day06.Solve2);
             Timing.Run(Day12.Day, Day12.Input, Day12.Solve1, Day12.Solve2);
             Timing.WriteReadmeTimings("README.md");
         }

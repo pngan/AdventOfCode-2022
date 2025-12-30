@@ -3,9 +3,8 @@ using System.IO;
 using System.Linq;
 using MoreLinq;
 
-namespace AdventOfCode_2022.code
-{
-    public class Day0
+namespace AdventOfCode_2022.code;
+public class Day0
 {
     public const string Day = "01";
     public static object Input()
@@ -28,5 +27,4 @@ namespace AdventOfCode_2022.code
 
         return input;
     }
-}
 }
