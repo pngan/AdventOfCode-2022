@@ -49,7 +49,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Run timing runner
-        run: dotnet run --project AdventOfCode-2022.csproj --configuration Release --no-build
+        run: dotnet run --project AdventOfCode.csproj --configuration Release --no-build
 
       - name: Commit README changes
         env:
