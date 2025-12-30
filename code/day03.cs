@@ -13,8 +13,27 @@ namespace AdventOfCode_2022.code
     public static object Solve1()
     {
         var input = Input();
-        // Not implemented in original
-        return new object();
+
+        int score = 0;
+        foreach (var line in input)
+        {
+            var half = line.Length / 2;
+            var first = line[..half];
+            var last = line[half..];
+            foreach (var c in first)
+            {
+                if (last.Contains(c))
+                {
+                    if (c >= 'a')
+                        score += (c - 'a' + 1);
+                    else
+                        score += (c - 'A' + 27);
+                    break;
+                }
+                
+            }
+        }
+        return score;
     }
 
     public static object Solve2()

@@ -20,8 +20,13 @@ An example to get the input files for Year 2022 and Day 1 is:
 
 | Day | Name | Type | Part 1 (ms) | Part 2 (ms) |
 |---:|---|---|---:|---:|
-| [01](code/day01.cs) | [Calorie Counting](https://adventofcode.com/2022/day/1) | Sorting/Search | 9 | 5 |
-| [02](code/day02.cs) | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Unknown | 1 | 0 |
+| [01](code/day01.cs) | [Calorie Counting](https://adventofcode.com/2022/day/1) | Sorting/Search | 17 | 7 |
+| [02](code/day02.cs) | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Unknown | 2 | 1 |
+| [03](code/day03.cs) | [Rucksack Reorganization](https://adventofcode.com/2022/day/3) | Unknown | 0 | 3 |
+| [04](code/day04.cs) | [Camp Cleanup](https://adventofcode.com/2022/day/4) | Parsing | 5 | 3 |
+| [12](code/day12.cs) | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) | Graph | 76 | 19 |
 
 <!-- TIMINGS END -->
+
+
 
