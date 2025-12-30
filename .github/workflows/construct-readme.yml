@@ -34,7 +34,7 @@ jobs:
           
           # Extract the 7z archive
           $secretValue = $env:ARCHIVE_PASSWORD
-          7z x .\Input.7z -p"$secretValue"
+          7z x .\Input.7z -p"$secretValue" -aoa -y
           
           # Return to the original directory
           Pop-Location
