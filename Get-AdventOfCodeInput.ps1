@@ -31,8 +31,21 @@
     } catch {
         Write-Output "Error: Failed to download input data. Please check your session cookie and ensure you have access to the Advent of Code website."
     }
-	
-	$7zipPath = "$env:ProgramData\chocolatey\bin\7z.exe"
+    
+    if ($IsWindows) {
+        Write-Host "Running on Windows. Using Windows-specific commands."
+        $7zipPath = "$env:ProgramData\chocolatey\bin\7z.exe"
+	    $Target = ".\Input.7z"
+    } elseif ($IsLinux) {
+        Write-Host "Running on Linux (Bash environment). Using Linux-specific commands."
+        $7zipPath = "/usr/bin/7z"
+	    $Target = "Input.7z"
+    } else {
+        Write-Host "Running on another OS (e.g., macOS)."
+        # Other OS commands
+    }
+
+
 
 	if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
 		throw "7 zip executable '$7zipPath' not found"
@@ -41,7 +54,6 @@
 	Set-Alias Start-SevenZip $7zipPath
 
 	$Source = "*.txt"
-	$Target = ".\Input.7z"
     Push-Location input
 	Start-SevenZip a $Target $Source -p"${Password}"
 	Pop-Location
@@ -49,7 +61,7 @@
     # Also copy the days code file
     Push-Location code
     $dayFile = "day{0:D2}.cs" -f $Day
-	#Copy-Item -Path template.cs -Destination $dayFile -Force
+	Copy-Item -Path template.cs -Destination $dayFile -Force
 	Pop-Location
 	
 # Example usage:
