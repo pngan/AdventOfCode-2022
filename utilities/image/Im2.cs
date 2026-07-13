@@ -11,8 +11,10 @@ using Image = Dictionary<(int r, int c), int>;
 
 public class Im2
 {
-    public Im2(IEnumerable<string> s)
+    public Im2(IEnumerable<string> str)
     {
+        // skip blank lines
+        var s = str.Where(row => !string.IsNullOrEmpty(row));
         ROWS = s.Count();
         COLS = s.First().Length;
 

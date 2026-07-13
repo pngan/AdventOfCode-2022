@@ -8,7 +8,7 @@ public class Day08
     public const string Day = "08";
     public static Im2 Input()
     {
-        var input = File.ReadLines($"input/2022_{Day}_input.txt").Where(s => !string.IsNullOrEmpty(s));
+        var input = File.ReadLines($"input/2022_{Day}_input.txt");
         return new Im2(input);
     }
 
